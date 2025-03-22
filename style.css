@@ -1,0 +1,208 @@
+/* CSS Reset */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Airbnb Cereal VF, Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+}
+
+body {
+    height: 1005;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header set to flex, and wrap for dynamic */
+header, .sort {
+    display: flex;
+    justify-content: space-between;
+    background-color: #66bfbf;
+    flex-wrap: wrap;
+    padding: 3px;
+}
+
+/* margin, background for room and sort */
+.sort, main {
+    background-color: white;
+}
+
+.sort {
+    justify-content: center;
+    gap: 50px;
+    margin: 8px;
+}
+
+/* center the title and the search bar */
+.center_header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+/* logo, account name format */
+.account {
+    width: 150px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 3px;
+}
+
+/* align logo, account vertically against each other */
+.account > * {
+    vertical-align: middle;
+}
+
+/* sign up form set to display none, appear upon click */
+.sign_up_form {
+    display: none;
+    position: fixed;
+    top: 30vh;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 17vw;
+    height: 25vh;
+    z-index: 100;
+}
+
+.sign_up_form > * {
+    margin: 5px;
+}
+
+/* make all table columns equal width */
+table {
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* asterisk red */
+.required {
+    color: crimson;
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+}
+
+/* format form buttons */
+.form_buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 25px;
+}
+
+.form_buttons > * {
+    height: 30px;
+    border-radius: 8px;
+}
+
+/* format submit button */
+.submit {
+    background-color: crimson;
+    color: white;
+    font-weight: 700;
+}
+
+/* add a blur, grey out effect when form is open */
+.overlay {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    backdrop-filter: blur(5px); /* Optional blur effect */
+    z-index: 99; /* Ensures it's below the form */
+}
+
+
+/* reset link tag style */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* center the placeholder text in the search bar */
+input {
+    text-align: center;
+}
+
+/* empty class for positioning only */
+.empty {
+    width: 150px;
+    height: 57px;
+}
+
+.sort > span {
+    text-align: center;
+    font-size: 13px;
+    width: 51px;
+}
+
+/* hover effect, scale 1.2 when hover */
+span:hover div,
+span:hover img {
+    transform: scale(1.2);
+    font-weight: 500;
+}
+
+
+/* main container for rooms set to flex, and wrap */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    height: 87vh;
+    margin: 8px;
+}
+
+/* all a tag, class rooms is also a flexbox, direction column */
+.container > * {
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
+}
+
+/* hover effect for each room */
+.container > *:hover {
+    transform: scale(1.1);
+    font-weight: 700;
+}
+
+.room > img {
+    border: solid 1px gray;;
+}
+
+.room_number {
+    text-align: center;
+}
+
+footer {
+    background-color:#524a79;
+    color: white;
+    height: 6vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3px;
+    justify-content: center;
+}
+
+.author {
+    display: flex;
+    gap: 25px;
+}
+
+.author > * {
+    width: 68px;
+    text-align: center;
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+
+    <header>
+        <!-- empty class to position other elements -->
+        <div class="empty"></div>
+        <div class="center_header">
+            <h4>partment</h3>
+            <form action="/search" method="get" >
+                <label for="search_bar"></label>
+                <input type="search" id="search" name="search_bar" placeholder="search something" size="50">
+                <button class="submit"></button>
+            </form>
+        </div>
+        <a href="" class="account">
+            <span>Account</span>
+            <img src="./images/account_info.svg" alt="default profile picture" width="32" height="32">
+        </a>
+
+        <!-- hidden sign up form -->
+        <div class="sign_up_form">
+            <h3 style="text-align: center;">Sign up Information</h3>
+            <table>
+                <tr>
+                    <td><label for="landlord_name">Full Name<span class="required">*</span>: </label></td>
+                    <td><input type="text" id="landlord_name" name="landlord_name" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="password">Password<span class="required">*</span>: </label></td>
+                    <td><input type="password" id="password" name="password"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="repassword">Password<span class="required">*</span>: </label></td>
+                    <td><input type="password" id="repassword" name="repassword"></td>
+                </tr>
+                
+                <tr>
+                    <td><label for="landlord_email">Email<span class="required">*</span>: </label></td>
+                    <td><input type="email" id="landlord_email" name="landlord_email"></td>
+                </tr>
+
+                <tr>
+                    <td><label for="phone">Phone: </label></td>
+                    <td><input type="tel" id="phone" name="phone" size="20"></td>
+                </tr>
+            </table>
+
+            <div class="form_buttons">
+                <button class="submit">Submit</button>
+                <button class="close" onclick="closeForm()">Close Form</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- all icons can be found here: https://pictogrammers.com/library/mdi/ -->
+    <div class="sort">
+        <span><img src="./images/door_icon.svg" alt="door" width="24" height="24"><div class="caption">Rooms</div></span>
+        <span><img src="./images/tenant_icon.svg" alt="tenant" width="24" height="24"><div class="caption">Tenants</div></span>
+        <span><img src="./images/building_icon.svg" alt="buildings" width="24" height="24"><div class="caption">Buildings</div></span>
+        <span><img src="./images/available_icon.svg" alt="availability icon" width="24" height="24"><div class="caption">Availability</div></span>
+    </div>
+
+    <main>
+        <div class="container">
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+            <a href="" class="room">
+                <img src="./images/room_icon.svg">
+                <div class="room_number">101</div>
+                <div class="building">Building A</div>
+                <div class="availability">Availability: </div>
+            </a>
+
+        </div>
+    </main>
+
+    <footer>
+        <h4>Contact Us</h4>
+        <div class="author">
+            <div>Vanesssa</div>
+            <div>Yi</div>
+            <div>Tuan</div>
+        </div>
+    </footer>
+</body>
+<script>
+    const signUp = document.querySelector(".account");
+    signUp.addEventListener("click", function() {
+        event.preventDefault();
+        event.stopPropagation(); 
+        document.querySelector(".sign_up_form").style.display = "block";
+        document.querySelector(".overlay").style.display = "flex";
+    });
+
+    function closeForm() {
+        document.querySelector(".sign_up_form").style.display = "none";
+        document.querySelector(".overlay").style.display = "none";
+    }
+</script>
+</html>
